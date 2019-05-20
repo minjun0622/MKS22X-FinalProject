@@ -19,6 +19,7 @@ class Snake {
       length++;
     }
   }
+
   void reset() {
     if (touched) {
       length = 0;
@@ -39,3 +40,7 @@ class Snake {
 //Food class
 
 //SnakeMaze class
+
+class SnakeMaze {
+  Snake(Math.random(10) );
+}
