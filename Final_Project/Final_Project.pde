@@ -14,12 +14,11 @@ class Snake {
   }
 
   void grow() {
-    if (//snake touches the food
+   /* if (//snake touches the food
       ) {
       length++;
-    }
+    }*/
   }
-
   void reset() {
     if (touched) {
       length = 0;
@@ -44,9 +43,9 @@ class Maze {
   walls = new boolean[20][20];
   for (int i=0;i<20;i++){
     for (int j=0;j<20;j++){
-      if (j==0 || j==19) {
-        boolean[i][j]=true;
-        
+      if (i==0 || i==19) {
+        walls[i][j]=true;
+        rect(i*30,i*30,30,30);
       }
     }
   }
@@ -55,8 +54,6 @@ class Maze {
 //Food class
 
 //SnakeMaze class
-
-
 
 void setup() {
   size(600,600);
