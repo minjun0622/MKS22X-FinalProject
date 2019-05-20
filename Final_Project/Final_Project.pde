@@ -9,7 +9,13 @@ class Snake {
 
 
 //Maze class
-
+class Maze {
+  boolean open;
+  
+  Maze() {
+  }
+  
+}
 //Food class
 
 //Snake Maze class
