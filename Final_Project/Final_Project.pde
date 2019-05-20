@@ -37,11 +37,17 @@ class Snake {
 //Maze class
 class Maze {
   boolean open;
-  
+  boolean [][] walls;
+
   Maze() {
-  }
+  walls = new boolean[20][20];
   
+  }
 }
 //Food class
 
 //SnakeMaze class
+
+void setup() {
+  Maze maze = new Maze();
+}
