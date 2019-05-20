@@ -36,11 +36,21 @@ class Snake {
 
 
 //Maze class
+class Maze {
+  boolean open;
+  boolean [][] walls;
 
+  Maze() {
+  walls = new boolean[20][20];
+  
+  }
+}
 //Food class
 
 //SnakeMaze class
 
-class SnakeMaze {
-  Snake(Math.random(10) );
+
+
+void setup() {
+  Maze maze = new Maze();
 }
