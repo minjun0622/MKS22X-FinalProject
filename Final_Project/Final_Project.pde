@@ -19,6 +19,7 @@ class Snake {
       length++;
     }
   }
+
   void reset() {
     if (touched) {
       length = 0;
@@ -54,6 +55,8 @@ class Maze {
 //Food class
 
 //SnakeMaze class
+
+
 
 void setup() {
   size(600,600);
