@@ -41,11 +41,13 @@ class Maze {
 
   Maze() {
   walls = new boolean[20][20];
+  stroke(255,187,119);
+  fill(255,187,119);
   for (int i=0;i<20;i++){
     for (int j=0;j<20;j++){
-      if (i==0 || i==19) {
+      if (i==0 || i==19 || j==0 || j==19) {
         walls[i][j]=true;
-        rect(i*30,i*30,30,30);
+        rect(i*30,j*30,30,30);
       }
     }
   }
