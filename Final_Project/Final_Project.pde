@@ -4,33 +4,54 @@
 class Snake {
 
   int length;
-  int [] moves;
+  int size;
+  ArrayList xcor, ycor;
   boolean touched;
-  float xcor, ycor;
+  int direction;
 
-  Snake(int len) {
-    length = len;
-    //make an option for color later.
-  }
-
-  void grow() {
-   /* if (//snake touches the food
-      ) {
-      length++;
-    }*/
-  }
-  void reset() {
-    if (touched) {
-      length = 0;
-    }
+  Snake() {
+    length = 1;
+    size = 10;
+    //arraylist because it's easier to add the coordinate values to it. 
+    xcor.add(Math.random(-1, 1));
+    ycor.add(Math.random(-1, 1))
+    direction = Math.random(4);
   }
 
-  void isTouching() {
-    for (int i =0; i < length; i++) {
-      //basically detects if the head of the snake touches any part of the body.
-      touched = true;
-    }
+
+  //make an option for color later.
+}
+
+void move() {
+  if (direction == 0) {
+    xcor.get(0);
+    ycor.get(0);
   }
+  if (direction == 1) {
+    xcor.get(0);
+    ycor.get(0);
+  }
+}
+
+
+void grow() {
+  /* if (//snake touches the food
+   ) {
+   length++;
+   }*/
+}
+void reset() {
+  if (touched) {
+    length = 0;
+  }
+}
+
+void isTouching() {
+  for (int i =0; i < length; i++) {
+    //basically detects if the head of the snake touches any part of the body.
+    touched = true;
+  }
+}
 }
 
 
@@ -40,15 +61,15 @@ class Maze {
   boolean [][] walls;
 
   Maze() {
-  walls = new boolean[20][20];
-  for (int i=0;i<20;i++){
-    for (int j=0;j<20;j++){
-      if (i==0 || i==19) {
-        walls[i][j]=true;
-        rect(i*30,i*30,30,30);
+    walls = new boolean[20][20];
+    for (int i=0; i<20; i++) {
+      for (int j=0; j<20; j++) {
+        if (i==0 || i==19) {
+          walls[i][j]=true;
+          rect(i*30, i*30, 30, 30);
+        }
       }
     }
-  }
   }
 }
 //Food class
@@ -56,6 +77,6 @@ class Maze {
 //SnakeMaze class
 
 void setup() {
-  size(600,600);
+  size(600, 600);
   Maze maze = new Maze();
 }
