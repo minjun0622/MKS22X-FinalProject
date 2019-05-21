@@ -31,6 +31,28 @@ void move() {
     xcor.get(0);
     ycor.get(0);
   }
+  if (direction == 2) {
+  }
+}
+//RIGHT = 1
+//UP = 2
+//LEFT = 3
+//DOWN = 4
+void keyPressed() {
+  if (key == CODED) {
+    if(key == RIGHT) {
+      direction = 1;
+    }
+    if (key == UP) {
+      direction = 2;
+    }
+    if (key == LEFT) {
+      direction = 3;
+    }
+    if (key == DOWN) {
+      direction = 4;
+    }
+  }
 }
 
 
@@ -42,7 +64,8 @@ void grow() {
 }
 void reset() {
   if (touched) {
-    length = 0;
+    length = 1;
+    //open the "you lost" menu
   }
 }
 
