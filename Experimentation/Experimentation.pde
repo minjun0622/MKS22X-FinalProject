@@ -4,7 +4,8 @@ int direction;
 
 void setup() {
   size(1000, 1000);
-  frameRate(10);
+  frameRate(15);
+  background(225);
 }
 
 void draw() {
@@ -17,7 +18,7 @@ void draw() {
   if (direction == 3) {
     rect(300, 100, 300, 100);
   }
-  background(225);
+  direction = 0;
   
 }
 
@@ -32,5 +33,8 @@ void keyPressed() {
   }
   if (key == TAB) {
     direction = 3;
+  }
+  if (key == ENTER) {
+    clear();
   }
 }
