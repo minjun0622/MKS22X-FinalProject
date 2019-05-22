@@ -18,7 +18,11 @@ class Snake {
     direction = Math.random(4);
   }
 
-
+  void grow() {
+    /* if (//snake touches the food
+     ) {
+     length++;
+     }*/
   //make an option for color later.
 }
 
@@ -84,12 +88,17 @@ class Maze {
   boolean [][] walls;
 
   Maze() {
-    walls = new boolean[20][20];
-    for (int i=0; i<20; i++) {
-      for (int j=0; j<20; j++) {
-        if (i==0 || i==19) {
+    walls = new boolean[50][50];
+    stroke(255, 187, 119);
+    fill(255, 187, 119);
+    for (int i=0; i<50; i++) {
+      for (int j=0; j<50; j++) {
+        if (i==0 || i==49 || j==0 || j==49) {
           walls[i][j]=true;
-          rect(i*30, i*30, 30, 30);
+          rect(i*12, j*12, 12, 12);
+        }
+        if (random(100)<30) {
+          rect(i*12, j*12, 12, 12);
         }
       }
     }
@@ -101,5 +110,6 @@ class Maze {
 
 void setup() {
   size(600, 600);
+  background(200, 145, 100);
   Maze maze = new Maze();
 }
