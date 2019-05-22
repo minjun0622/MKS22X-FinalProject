@@ -13,6 +13,8 @@ class Snake {
     //arraylist because it's easier to add the coordinate values to it. 
     xcor = new ArrayList();
     ycor = new ArrayList();
+    //xcor.add(Math.random());
+    //ycor.add(Math.random());
   }
 
   void grow() {
@@ -20,7 +22,6 @@ class Snake {
      ) {
      length++;
      }*/
-    //make an option for color later.
   }
 
   void move() {
@@ -58,16 +59,17 @@ class Snake {
 
 
   void reset() {
-    if (touched) {
+    if (isTouching()) {
       length = 1;
       //open the "you lost" menu
     }
   }
 
-  void isTouching() {
+  boolean isTouching() {
     for (int i = 0; i < length; i++) {
      //
       touched = true;
     }
+    return touched;
   }
 }
