@@ -13,8 +13,8 @@ class Snake {
     //arraylist because it's easier to add the coordinate values to it. 
     xcor = new ArrayList();
     ycor = new ArrayList();
-    //xcor.add(Math.random());
-    //ycor.add(Math.random());
+    xcor.add((float)random(-1, 2));
+    ycor.add((float)random(-1, 2));
   }
 
   void grow() {
