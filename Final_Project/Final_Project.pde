@@ -13,9 +13,9 @@ class Snake {
     length = 1;
     size = 10;
     //arraylist because it's easier to add the coordinate values to it. 
-    xcor.add(Math.random(-1, 1));
-    ycor.add(Math.random(-1, 1))
-    direction = Math.random(4);
+    xcor.add(random(-1, 1));
+    ycor.add(random(-1, 1));
+    direction = (int)random(4);
   }
 
   void grow() {
