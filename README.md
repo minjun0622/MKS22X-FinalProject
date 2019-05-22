@@ -13,6 +13,7 @@ Wrote the snake methods and filled some in. Will work on more. Divide the work. 
 # Mihad
 5/20/19
 Started working on the maze class. Thinking of how to display the maze and it's walls. Used a 2d boolean to represent where the walls will be.
+
 5/21/19
 The walls make the borders properly and is divided up properly. Background and colors for walls are temporarily decided and set. The maze is made completely randomly right now, not exactly an efficient maze structure.
 
