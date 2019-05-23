@@ -8,6 +8,8 @@ class Snake {
   int direction;
 
   Snake() {
+    rect(0, 0, 10, 10);
+    stroke(167);
     length = 1;
     size = 10;
     //arraylist because it's easier to add the coordinate values to it. 
@@ -18,8 +20,8 @@ class Snake {
   }
 
   void grow() {
-    if (){
-    }
+    xcor.add( xcor.get(length-1) + length);
+    ycor.add( ycor.get(length-1) + length);
     length++;
   }
 
@@ -40,6 +42,7 @@ class Snake {
     xcor.set(0, (xcor.get(0) + width) % width);
     ycor.set(0, (ycor.get(0) + height) % height);
   }
+ 
   //RIGHT = 1
   //UP = 2
   //LEFT = 3
@@ -76,5 +79,8 @@ class Snake {
       }
     }
     return false;
+  }
+  void display() {
+    
   }
 }
