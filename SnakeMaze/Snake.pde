@@ -13,8 +13,8 @@ class Snake {
     //arraylist because it's easier to add the coordinate values to it. 
     xcor = new ArrayList();
     ycor = new ArrayList();
-    xcor.add((float)random(-1, 2));
-    ycor.add((float)random(-1, 2));
+    xcor.add( random(width) );
+    ycor.add( random(height) );
   }
 
   void grow() {
@@ -25,21 +25,24 @@ class Snake {
   }
 
   void move() {
+    
     if (direction == 0) {
-      xcor.get(0);
-      ycor.get(0);
+      ycor.set(0, ycor.get(0) + length);
     }
     if (direction == 1) {
-      xcor.get(0);
-      ycor.get(0);
+      xcor.set(0, xcor.get(0) + length);
     }
     if (direction == 2) {
+      ycor.set(0, ycor.get(0) - length);
+    }
+    if (direction == 3) {
+      xcor.set(0, xcor.get(0) - length);
     }
   }
   //RIGHT = 1
   //UP = 2
   //LEFT = 3
-  //DOWN = 4
+  //DOWN = 0
   void keyPressed() {
     if (key == CODED) {
       if (key == RIGHT) {
