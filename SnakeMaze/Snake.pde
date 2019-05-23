@@ -1,6 +1,6 @@
 //snake class
 class Snake {
-
+//ah ah ah ignore
   int length;
   int size;
   ArrayList <Float> xcor, ycor;
@@ -26,7 +26,6 @@ class Snake {
   }
 
   void move() {
-
     if (direction == 0) {
       ycor.set(0, ycor.get(0) + length);
     }
@@ -42,7 +41,7 @@ class Snake {
     xcor.set(0, (xcor.get(0) + width) % width);
     ycor.set(0, (ycor.get(0) + height) % height);
   }
- 
+
   //RIGHT = 1
   //UP = 2
   //LEFT = 3
@@ -81,6 +80,5 @@ class Snake {
     return false;
   }
   void display() {
-    
   }
 }
