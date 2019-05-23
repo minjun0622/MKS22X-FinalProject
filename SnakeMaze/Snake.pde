@@ -1,6 +1,5 @@
 //snake class
 class Snake {
-
   int length;
   int size;
   ArrayList <Float> xcor, ycor;
@@ -8,6 +7,8 @@ class Snake {
   int direction;
 
   Snake() {
+    rect(0, 0, 12, 12);
+    stroke(167);
     length = 1;
     size = 10;
     //arraylist because it's easier to add the coordinate values to it. 
@@ -18,14 +19,12 @@ class Snake {
   }
 
   void grow() {
-    /* if (//snake touches the food
-     ) {
-     length++;
-     }*/
+    xcor.add( xcor.get(length-1) + length);
+    ycor.add( ycor.get(length-1) + length);
+    length++;
   }
 
   void move() {
-    
     if (direction == 0) {
       ycor.set(0, ycor.get(0) + length);
     }
@@ -38,7 +37,10 @@ class Snake {
     if (direction == 3) {
       xcor.set(0, xcor.get(0) - length);
     }
+    xcor.set(0, (xcor.get(0) + width) % width);
+    ycor.set(0, (ycor.get(0) + height) % height);
   }
+
   //RIGHT = 1
   //UP = 2
   //LEFT = 3
@@ -69,10 +71,14 @@ class Snake {
   }
 
   boolean isTouching() {
-    for (int i = 0; i < length; i++) {
-     //
-      touched = true;
+    for (int i = 1; i < length; i++) {
+      if (dist(xcor.get(0), ycor.get(0), xcor.get(i), ycor.get(i)) < length) {
+        return true;
+      }
     }
-    return touched;
+    return false;
+  }
+  void display() {
+    //This is method that will help the snake be displayed in the world.
   }
 }

@@ -15,8 +15,8 @@ This README.md update got erased I think due to merge conflicts, therefore, I am
 5/22/19
 Separated the tabs for different classes in the final project. This meant that the directory had to be remade. Also, I further worked on the locomotion of the snake and how it moves. I am using a ArrayList of floats instead of an array because it's easier to add and get.
 
-
-5/22/19
+5/23/19
+Today, I figured out that there were 3 authors that were writing as me. Therefore, I did git config to set my terminal to my git username. Also, I got the display() method and I got the move method working. The grow method also works (I hope). Figured out with my partner that a "maze" was really hard to make in this world with a snake. Settled on making a snake game that involved obstacles that resembles a maze.
 
 5/21/19
 # Mihad
@@ -27,4 +27,4 @@ Started working on the maze class. Thinking of how to display the maze and it's 
 The walls make the borders properly and is divided up properly. Background and colors for walls are temporarily decided and set. The maze is made completely randomly right now, not exactly an efficient maze structure.
 
 5/22/19
-Had to fix the files since we were using different tabs. The main file is now the SnakeMaze one. 
+Had to fix the files since we were using different tabs. The main file is now the SnakeMaze one.

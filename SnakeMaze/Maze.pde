@@ -1,7 +1,3 @@
-//Final Project 
-
-
-
 //Maze class
 class Maze {
   boolean open;
