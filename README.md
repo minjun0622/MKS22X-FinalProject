@@ -25,3 +25,6 @@ Started working on the maze class. Thinking of how to display the maze and it's 
 
 5/21/19
 The walls make the borders properly and is divided up properly. Background and colors for walls are temporarily decided and set. The maze is made completely randomly right now, not exactly an efficient maze structure.
+
+5/22/19
+Had to fix the files since we were using different tabs. The main file is now the SnakeMaze one. 
