@@ -18,14 +18,13 @@ class Snake {
   }
 
   void grow() {
-    /* if (//snake touches the food
-     ) {
-     length++;
-     }*/
+    if (){
+    }
+    length++;
   }
 
   void move() {
-    
+
     if (direction == 0) {
       ycor.set(0, ycor.get(0) + length);
     }
@@ -38,6 +37,8 @@ class Snake {
     if (direction == 3) {
       xcor.set(0, xcor.get(0) - length);
     }
+    xcor.set(0, (xcor.get(0) + width) % width);
+    ycor.set(0, (ycor.get(0) + height) % height);
   }
   //RIGHT = 1
   //UP = 2
@@ -69,10 +70,11 @@ class Snake {
   }
 
   boolean isTouching() {
-    for (int i = 0; i < length; i++) {
-     //
-      touched = true;
+    for (int i = 1; i < length; i++) {
+      if (dist(xcor.get(0), ycor.get(0), xcor.get(i), ycor.get(i)) < length) {
+        return true;
+      }
     }
-    return touched;
+    return false;
   }
 }
