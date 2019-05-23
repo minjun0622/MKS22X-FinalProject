@@ -1,6 +1,5 @@
 //snake class
 class Snake {
-//ah ah ah ignore
   int length;
   int size;
   ArrayList <Float> xcor, ycor;
@@ -8,7 +7,7 @@ class Snake {
   int direction;
 
   Snake() {
-    rect(0, 0, 10, 10);
+    rect(0, 0, 12, 12);
     stroke(167);
     length = 1;
     size = 10;
@@ -80,5 +79,6 @@ class Snake {
     return false;
   }
   void display() {
+    //This is method that will help the snake be displayed in the world.
   }
 }
