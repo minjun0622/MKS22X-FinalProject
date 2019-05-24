@@ -6,11 +6,12 @@ void setup() {
   frameRate(20);
   lizard = new Snake();
   hunger = new Food();
+  Maze maze = new Maze();
   
 }
 
 void draw() {
-  background(255);
+  background(52, 62, 166);
   lizard.move();
   lizard.display();
   hunger.display();

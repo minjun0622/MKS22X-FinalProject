@@ -5,8 +5,8 @@ class Maze {
 
   Maze() {
     walls = new boolean[50][50];
-    stroke(255, 187, 119);
-    fill(255, 187, 119);
+    stroke(21, 24, 64);
+    fill(21, 24, 64);
     for (int i=0; i<50; i++) {
       for (int j=0; j<50; j++) {
         if (i==0 || i==49 || j==0 || j==49) {
