@@ -8,7 +8,7 @@ class Food {
   }
   void display() {
     fill(255, 160, 10);
-    rect(xcor, ycor, 10, 10);
+    rect(xcor, ycor, 12, 12);
   }
   void reset() {
     xcor = random(100, width - 100);
