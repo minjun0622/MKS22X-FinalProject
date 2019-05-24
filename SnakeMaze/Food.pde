@@ -1,11 +1,15 @@
 class Food {
-  int quantity;
-  int xcor;
-  int ycor;
-  Food(int x,int y) {
-    xcor=x;
-    ycor=y;
-    fill(255,160,10);
-    rect(x,y,10,10);
+  float quantity;
+  float xcor;
+  float ycor;
+  Food() {
+    xcor = random(100, width - 100);
+    ycor = random(100, height - 100);
+    fill(255, 160, 10);
+    rect(xcor, ycor, 10, 10);
+  }
+  void reset() {
+    xcor = random(100, width - 100);
+    ycor = random(100, height - 100);
   }
 }
