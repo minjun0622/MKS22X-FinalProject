@@ -50,13 +50,17 @@ class Snake {
   }
 
   //equivalent to a die method. 
+  /*
   boolean reset() {
     if (isTouching()) {
+      leng = 1;
       return true;
       //open the "you lost" menu
     }
     return false;
   }
+  */
+
   //boolean method that show whether the snake is touching the other pieces.
   boolean isTouching() {
     for (int i = 1; i < leng; i++) {
@@ -81,6 +85,6 @@ class Snake {
     textAlign(CENTER);
     fill(255);
     textSize(30);
-    text("You died", height/2, width/ 2);
+    text("You died =D", height/2, width/ 2);
   }
 }

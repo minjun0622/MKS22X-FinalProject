@@ -1,5 +1,7 @@
 Snake lizard;
 Food hunger;
+boolean end; 
+//Maze maze;
 
 void setup() {
   size(600, 600);
@@ -9,13 +11,25 @@ void setup() {
   hunger = new Food();
 }
 
+
 void draw() {
   background(52, 62, 166);
   lizard.move();
   lizard.display();
   hunger.display();
   if (lizard.reset() ) {
+  if (lizard.isTouching() ) {
     lizard.displayEndScreen();
+  } else {
+    background(255); 
+    lizard.move();
+    lizard.display();
+    hunger.display();
+
+    if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
+      hunger.reset();
+      lizard.grow();
+    }
   }
 
   if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
@@ -23,6 +37,7 @@ void draw() {
     lizard.grow();
   }
 }
+
 void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT) {
