@@ -10,12 +10,13 @@ void setup() {
 }
 
 void draw() {
-  background(200, 145, 100);
-
+  background(255);
   lizard.move();
   lizard.display();
   hunger.display();
-  lizard.reset();
+  if (lizard.reset() ){
+    
+  }
   
   if( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ){
     hunger.reset();
