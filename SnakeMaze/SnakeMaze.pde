@@ -6,7 +6,7 @@ void setup() {
   frameRate(20);
   lizard = new Snake();
   hunger = new Food();
-  rectMode(CENTER);
+  
 }
 
 void draw() {
@@ -15,7 +15,7 @@ void draw() {
   lizard.move();
   lizard.display();
   hunger.display();
-  //lizard.reset()
+  lizard.reset();
   
   if( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ){
     hunger.reset();
@@ -35,7 +35,7 @@ void keyPressed() {
       lizard.direction = 3;
     }
     if (keyCode == DOWN) {
-      lizard.direction = 4;
+      lizard.direction = 0;
     }
   }
 }

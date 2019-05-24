@@ -7,9 +7,9 @@ class Snake {
 
   Snake() {
     rect(0, 0, 12, 12);
-    stroke(167);
+    stroke(300);
     leng = 1;
-    size = 10;
+    size = 12;
     //arraylist because it's easier to add the coordinate values to it. 
     xcor = new ArrayList();
     ycor = new ArrayList();
@@ -52,14 +52,14 @@ class Snake {
 
   void reset() {
     if (isTouching()) {
-       leng = 1;
+      leng = 1;
       float xtemp = xcor.get(0);
       float ytemp = ycor.get(0);
       xcor.clear();
       ycor.clear();
       xcor.add(xtemp);
       ycor.add(ytemp);
-    
+
       //open the "you lost" menu
     }
   }
@@ -72,12 +72,13 @@ class Snake {
     }
     return false;
   }
+
   void display() {
     for (int i = 0; i < leng; i++) {
-      stroke(179, 140, 198);
-      fill(100, 0, 100, 200);
+      stroke(200, 180, 200);
+      fill(300);
       rect(xcor.get(i), ycor.get(i), size, size);
     }
-    //This is method that will help the snake be displayed in the world.
+    
   }
 }
