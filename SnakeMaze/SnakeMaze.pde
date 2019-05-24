@@ -15,7 +15,7 @@ void draw() {
   lizard.display();
   hunger.display();
   if (lizard.reset() ){
-    
+    lizard.displayEndScreen();
   }
   
   if( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ){

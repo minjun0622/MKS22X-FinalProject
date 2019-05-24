@@ -76,4 +76,11 @@ class Snake {
       //The size of the snake was set by the size that was declared in the constructor.
     }
   }
+  void displayEndScreen() {
+    background(0);
+    textAlign(CENTER);
+    fill(255);
+    textSize(30);
+    text("You died", height/2, width/ 2);
+  }
 }
