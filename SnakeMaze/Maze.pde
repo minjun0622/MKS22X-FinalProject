@@ -14,6 +14,7 @@ class Maze {
           rect(i*12, j*12, 12, 12);
         }
         if (random(100)<30) {
+          walls[i][j]=true;
           rect(i*12, j*12, 12, 12);
         }
       }
