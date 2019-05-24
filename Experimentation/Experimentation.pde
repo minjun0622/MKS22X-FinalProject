@@ -10,7 +10,7 @@ void setup() {
 
 void draw() {
   if (direction == 1) {
-    rect(200, 200, 200, 200);
+    rect(200, 200, 50, 50);
   }
   if (direction == 2) {
     rect(100, 100, 100, 100);
@@ -18,7 +18,6 @@ void draw() {
   if (direction == 3) {
     rect(300, 100, 300, 100);
   }
-  direction = 0;
 }
 
 //RIGHT = 1
@@ -27,16 +26,16 @@ void draw() {
 //DOWN = 0
 void keyPressed() {
   if (key == CODED) {
-    if (key == RIGHT) {
+    if (keyCode == RIGHT) {
       direction = 1;
     }
-    if (key == UP) {
+    if (keyCode == UP) {
       direction = 2;
     }
-    if (key == LEFT) {
+    if (keyCode == LEFT) {
       direction = 3;
     }
-    if (key == DOWN) {
+    if (keyCode == DOWN) {
       direction = 0;
     }
   }

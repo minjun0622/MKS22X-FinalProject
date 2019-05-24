@@ -52,7 +52,14 @@ class Snake {
 
   void reset() {
     if (isTouching()) {
-      leng = 1;
+       leng = 1;
+      float xtemp = xcor.get(0);
+      float ytemp = ycor.get(0);
+      xcor.clear();
+      ycor.clear();
+      xcor.add(xtemp);
+      ycor.add(ytemp);
+    
       //open the "you lost" menu
     }
   }
@@ -68,7 +75,7 @@ class Snake {
   void display() {
     for (int i = 0; i < leng; i++) {
       stroke(179, 140, 198);
-      fill(100, 0, 100, map(i - 1, 0, leng - 1, 250, 50));
+      fill(100, 0, 100, 200);
       rect(xcor.get(i), ycor.get(i), size, size);
     }
     //This is method that will help the snake be displayed in the world.
