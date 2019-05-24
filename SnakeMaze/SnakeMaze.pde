@@ -8,24 +8,16 @@ void setup() {
   frameRate(20);
   lizard = new Snake();
   hunger = new Food();
-<<<<<<< HEAD
   //maze = new Maze();
 }
 
-void draw() {
-  if (lizard.isTouching() ) {
-=======
-  Maze maze = new Maze();
-  
-}
 
 void draw() {
   background(52, 62, 166);
   lizard.move();
   lizard.display();
   hunger.display();
-  if (lizard.reset() ){
->>>>>>> fd2372f6024064f56deaca094543b6acd5546ad8
+  if (lizard.isTouching() ) {
     lizard.displayEndScreen();
   } else {
     background(255); 
