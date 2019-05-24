@@ -1,22 +1,18 @@
 Snake lizard;
 Food hunger;
 boolean end; 
-//Maze maze;
+Maze maze;
 
 void setup() {
   size(600, 600);
   frameRate(20);
   lizard = new Snake();
   hunger = new Food();
-  //maze = new Maze();
+  maze = new Maze();
 }
 
 
 void draw() {
-  background(52, 62, 166);
-  lizard.move();
-  lizard.display();
-  hunger.display();
   if (lizard.isTouching() ) {
     lizard.displayEndScreen();
   } else {
