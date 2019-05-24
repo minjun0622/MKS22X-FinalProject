@@ -14,11 +14,6 @@ void setup() {
 
 
 void draw() {
-  background(52, 62, 166);
-  lizard.move();
-  lizard.display();
-  hunger.display();
-  if (lizard.reset() ) {
   if (lizard.isTouching() ) {
     lizard.displayEndScreen();
   } else {
