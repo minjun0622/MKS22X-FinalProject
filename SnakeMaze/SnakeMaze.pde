@@ -1,7 +1,7 @@
 Snake lizard;
 Food hunger;
 boolean end; 
-//Maze maze;
+Maze maze;
 
 void setup() {
   size(600, 600);
@@ -9,6 +9,7 @@ void setup() {
   //Maze maze = new Maze();
   lizard = new Snake();
   hunger = new Food();
+  maze = new Maze();
 }
 
 
