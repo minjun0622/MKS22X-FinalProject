@@ -4,10 +4,9 @@ Food hunger;
 void setup() {
   size(600, 600);
   frameRate(20);
+  //Maze maze = new Maze();
   lizard = new Snake();
   hunger = new Food();
-  Maze maze = new Maze();
-  
 }
 
 void draw() {
@@ -15,15 +14,14 @@ void draw() {
   lizard.move();
   lizard.display();
   hunger.display();
-  if (lizard.reset() ){
+  if (lizard.reset() ) {
     lizard.displayEndScreen();
   }
-  
-  if( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ){
+
+  if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
     hunger.reset();
     lizard.grow();
   }
-  
 }
 void keyPressed() {
   if (key == CODED) {

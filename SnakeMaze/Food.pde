@@ -3,8 +3,8 @@ class Food {
   float xcor;
   float ycor;
   Food() {
-    xcor = random(100, width - 100);
-    ycor = random(100, height - 100);
+    xcor = 600/random(1,49);
+    ycor = 600/random(1,49);
   }
   void display() {
     stroke(255, 160, 10);
