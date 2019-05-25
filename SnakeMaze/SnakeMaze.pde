@@ -6,19 +6,12 @@ Maze maze;
 void setup() {
   size(600, 600);
   frameRate(20);
-  //Maze maze = new Maze();
   lizard = new Snake();
   hunger = new Food();
   maze = new Maze();
 }
 
-
 void draw() {
-  background(52, 62, 166);
-  lizard.move();
-  lizard.display();
-  hunger.display();
-  if (lizard.reset() ) {
   if (lizard.isTouching() ) {
     lizard.displayEndScreen();
   } else {
@@ -31,11 +24,6 @@ void draw() {
       hunger.reset();
       lizard.grow();
     }
-  }
-
-  if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
-    hunger.reset();
-    lizard.grow();
   }
 }
 

@@ -7,7 +7,7 @@ class Food {
     ycor = 600/random(1,49);
   }
   void display() {
-    stroke(255, 160, 10);
+    stroke(200, 180, 200);
     fill(255, 160, 10);
     rect(xcor, ycor, 12, 12);
   }
