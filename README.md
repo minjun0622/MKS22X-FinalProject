@@ -16,7 +16,10 @@ This README.md update got erased I think due to merge conflicts, therefore, I am
 Separated the tabs for different classes in the final project. This meant that the directory had to be remade. Also, I further worked on the locomotion of the snake and how it moves. I am using a ArrayList of floats instead of an array because it's easier to add and get.
 
 5/23/19
-Today, I figured out that there were 3 authors that were writing as me. Therefore, I did git config to set my terminal to my git username. Also, I got the display() method and I got the move method working. The grow method also works (I hope). Figured out with my partner that a "maze" was really hard to make in this world with a snake. Settled on making a snake game that involved obstacles that resembles a maze. I worked on making the world and displaying the function. I slowly got the methods working and first completed the move method. I figured out that the direction keys didn't work because I assigned it to the wrong value. I then completed it with the reset and grow method. 
+Today, I figured out that there were 3 authors that were writing as me. Therefore, I did git config to set my terminal to my git username. Also, I got the display() method and I got the move method working. The grow method also works (I hope). Figured out with my partner that a "maze" was really hard to make in this world with a snake. Settled on making a snake game that involved obstacles that resembles a maze. I worked on making the world and displaying the function. I slowly got the methods working and first completed the move method. I figured out that the direction keys didn't work because I assigned it to the wrong value. I then completed it with the reset and grow method.
+
+5/24/19
+A lot of things done today! I got the die menu working by using the isTouching(), therefore, the reset method really became useless. Right before the end of class, I thought of using a pause menu that will just pause the game and then continue it right after. Also, changed the color of the snake! (Green) Finally, I tried the snake with the maze but it becomes really buggy with both the features combined. 
 
 5/21/19
 # Mihad
