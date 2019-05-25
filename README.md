@@ -19,7 +19,10 @@ Separated the tabs for different classes in the final project. This meant that t
 Today, I figured out that there were 3 authors that were writing as me. Therefore, I did git config to set my terminal to my git username. Also, I got the display() method and I got the move method working. The grow method also works (I hope). Figured out with my partner that a "maze" was really hard to make in this world with a snake. Settled on making a snake game that involved obstacles that resembles a maze. I worked on making the world and displaying the function. I slowly got the methods working and first completed the move method. I figured out that the direction keys didn't work because I assigned it to the wrong value. I then completed it with the reset and grow method.
 
 5/24/19
-A lot of things done today! I got the die menu working by using the isTouching(), therefore, the reset method really became useless. Right before the end of class, I thought of using a pause menu that will just pause the game and then continue it right after. Also, changed the color of the snake! (Green) Finally, I tried the snake with the maze but it becomes really buggy with both the features combined. 
+A lot of things done today! I got the die menu working by using the isTouching(), therefore, the reset method really became useless. Right before the end of class, I thought of using a pause menu that will just pause the game and then continue it right after. Also, changed the color of the snake! (Green) Finally, I tried the snake with the maze but it becomes really buggy with both the features combined.
+
+5/25/19
+The weekend, got a loading screen working that was similar to the end screen. Using two similar features, I realized that the displayEndScreen() method should not have been in the Snake class so I imported it. I also used an int variable to keep track of which screen I was in. If I started, it would start with the loading screen, then I press the tab key to change that variable which brings me to the game itself. Need to work on the maze, partner is still working on it.
 
 5/21/19
 # Mihad
