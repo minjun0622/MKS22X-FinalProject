@@ -14,8 +14,12 @@ void setup() {
 }
 
 void draw() {
+  //starting menu
   if (gameScreen == 0) {
     displayStartingScreen();
+    //game screeen
+  } else if (lizard.isTouching() ) {
+    displayEndScreen();
   } else if (gameScreen == 1) {
     background(255); 
     lizard.move();
@@ -26,8 +30,7 @@ void draw() {
       hunger.reset();
       lizard.grow();
     }
-  } else if (lizard.isTouching() ) {
-    displayEndScreen();
+    //death screen
   }
 }
 
@@ -56,7 +59,13 @@ void displayStartingScreen() {
   textAlign(CENTER, BOTTOM);
   textSize(30);
   text("Press the TAB key to start the game!", height/2, width/2);
+  textAlign(CENTER);
+  textSize(30);
+  text("Have fun!", height/2, width/4);
+  textSize(25);
+  text("Game by Minjun Seo and Mihad Khondker", height/2, width- 50);
 }
+
 void displayEndScreen() {
   background(0);
   textAlign(CENTER);
