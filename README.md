@@ -24,6 +24,12 @@ A lot of things done today! I got the die menu working by using the isTouching()
 5/25/19
 The weekend, got a loading screen working that was similar to the end screen. Using two similar features, I realized that the displayEndScreen() method should not have been in the Snake class so I imported it. I also used an int variable to keep track of which screen I was in. If I started, it would start with the loading screen, then I press the tab key to change that variable which brings me to the game itself. Need to work on the maze, partner is still working on it.
 
+5/26-5/27
+Since it's the weekend, I was busy studying for SAT. Not an excuse! Sorry!
+However, I realized that something in the draw could be transformed into a method so I turned it into a method called playGame(). Adding that to my prototype.
+I was thinking of a pause menu or a cheat code where you can instantly enter codes that will complete a game.
+I will attempt to work on the maze. My partner didn't finish it yet.
+
 5/21/19
 # Mihad
 5/20/19
