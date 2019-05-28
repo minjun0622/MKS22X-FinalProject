@@ -7,6 +7,7 @@ class Maze {
 
   Maze() {
     walls = new boolean[50][50];
+    stroke(0);
     fill(153);
   }
   void display() {
