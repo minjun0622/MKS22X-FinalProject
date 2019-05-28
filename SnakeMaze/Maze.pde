@@ -2,36 +2,41 @@
 class Maze {
   boolean open;
   boolean [][] walls;
-  float xcor, ycor;
+  ArrayList <Float> xcor, ycor;
+  float chances = random(100);
 
 
   Maze() {
     walls = new boolean[50][50];
-    fill(153);
+    for (int i = 0; i < 50; i++) {
+      for (int j = 0; j < 50; j++) {
+        walls[i][j] = false;
+      }
+    }
+    stroke(21, 24, 64);
+    fill(255);
   }
   void display() {
     for (int i=0; i< 50; i++) {
       for (int j=0; j< 50; j++) {
         if (i==0 || i==49 || j==0 || j==49) {
-          walls[i][j] = true;
           rect(i*12, j*12, 12, 12);
         }
-        /*if (random(100)<30) {
-         walls[i][j]=true;
-         rect(i*12, j*12, 12, 12);
-         }
-         */
+        if (chances < 30) {
+          walls[i][j]=true;
+          rect(i*12, j*12, 12, 12);
+        }
       }
     }
   }
-  void returnStatus() {
+  boolean returnStatus() {
     for (int i = 0; i < 50; i++) {
       for (int j = 0; j < 50; j++) {
         if (walls[i][j]) {
-          open = true;
+          return true;
         }
       }
     }
-    open = false;
+    return false;
   }
 }
