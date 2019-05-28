@@ -8,6 +8,7 @@ class Maze {
 
   Maze() {
     walls = new boolean[50][50];
+<<<<<<< HEAD
     for (int i = 0; i < 50; i++) {
       for (int j = 0; j < 50; j++) {
         walls[i][j] = false;
@@ -15,8 +16,12 @@ class Maze {
     }
     stroke(21, 24, 64);
     fill(255);
+=======
+>>>>>>> 268326d09e22dd6b7782458b9d7701372e6541de
   }
   void display() {
+    stroke(0);
+    fill(255, 160, 10);
     for (int i=0; i< 50; i++) {
       for (int j=0; j< 50; j++) {
         if (i==0 || i==49 || j==0 || j==49) {
