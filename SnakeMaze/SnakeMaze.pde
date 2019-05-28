@@ -11,9 +11,9 @@ void setup() {
   size(600, 600);
   frameRate(20);
   gameScreen = 0;
+  maze = new Maze();
   lizard = new Snake();
   hunger = new Food();
-  maze = new Maze();
 }
 
 void draw() {
@@ -23,7 +23,7 @@ void draw() {
     //game screeen
   } else if (lizard.isTouching() || endGame() || moves == 50.0) {
     displayEndScreen();
-  } else if (lizard.leng == 15 || cheat == 5.0) {
+  } else if (lizard.leng >= 15 || cheat >= 5.0) {
     displayWinScreen();
   } else if (gameScreen == 1) {
     background(255); 

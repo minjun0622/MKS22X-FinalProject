@@ -12,7 +12,7 @@ class Food {
     rect(xcor, ycor, 12, 12);
   }
   void reset() {
-    xcor = random(100, width - 100);
-    ycor = random(100, height - 100);
+    xcor = random(100, width - 200);
+    ycor = random(100, height - 200);
   }
 }

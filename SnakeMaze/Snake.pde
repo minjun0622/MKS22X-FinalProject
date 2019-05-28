@@ -13,8 +13,8 @@ class Snake {
     //arraylist because it's easier to add the coordinate values to it. 
     xcor = new ArrayList();
     ycor = new ArrayList();
-    xcor.add( random(width) );
-    ycor.add( random(height) );
+    xcor.add( random(width - 150) );
+    ycor.add( random(height - 150) );
   }
 
   void grow() {
@@ -45,10 +45,9 @@ class Snake {
     if (direction == 3) {
       xcor.set(0, xcor.get(0) - size);
     }
-    /*
+
     xcor.set(0, (xcor.get(0) + width) % width);
-     ycor.set(0, (ycor.get(0) + height) % height);
-     */
+    ycor.set(0, (ycor.get(0) + height) % height);
   }
 
   //equivalent to a die method. 
