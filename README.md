@@ -30,6 +30,10 @@ However, I realized that something in the draw could be transformed into a metho
 I was thinking of a pause menu or a cheat code where you can instantly enter codes that will complete a game.
 I will attempt to work on the maze. My partner didn't finish it yet.
 
+5/27/19
+I made a win screen work when the game reached 15 lengths. Instead of loading another screen, I just froze the game screen and displayed text. I'm so tired lol.
+
+
 5/21/19
 # Mihad
 5/20/19
