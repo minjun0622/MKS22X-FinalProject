@@ -7,6 +7,12 @@ class Maze {
 
   Maze() {
     walls = new boolean[50][50];
+    String[] coordinates = loadStrings("coordinates.txt");
+    for (int i=0; i<coordinates.length; i++) {
+      int[] cors;
+      cors=int(split(coordinates[i],","));
+      walls[cors[0]][cors[1]]=true;
+    }
   }
   void display() {
     stroke(255, 160, 10);
@@ -17,11 +23,9 @@ class Maze {
           walls[i][j] = true;
           rect(i*12, j*12, 12, 12);
         }
-        /*if (random(100)<30) {
-         walls[i][j]=true;
-         rect(i*12, j*12, 12, 12);
-         }
-         */
+        if (walls[i][j]==true) {
+          rect(i*12, j*12, 12, 12);
+        }
       }
     }
   }
