@@ -25,11 +25,7 @@ void draw() {
     lizard.move();
     lizard.display();
     hunger.display();
-
-    if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
-      hunger.reset();
-      lizard.grow();
-    }
+    playGame();
     //death screen
   }
 }
@@ -72,4 +68,10 @@ void displayEndScreen() {
   fill(255);
   textSize(30);
   text("You died =D", height/2, width/ 2);
+}
+void playGame() {
+  if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
+    hunger.reset();
+    lizard.grow();
+  }
 }
