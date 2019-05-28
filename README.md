@@ -33,6 +33,9 @@ I will attempt to work on the maze. My partner didn't finish it yet.
 5/27/19
 I made a win screen work when the game reached 15 lengths. Instead of loading another screen, I just froze the game screen and displayed text. I'm so tired lol.
 
+5/28/19
+Before class, I just adjusted the amount of moves maximum and just commented it out will implement if needed. I'm trying to get the maze working but I am not making much progress and I am just trying to get the snake to die.
+
 
 5/21/19
 # Mihad
