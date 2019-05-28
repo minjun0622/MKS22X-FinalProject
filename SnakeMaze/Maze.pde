@@ -9,7 +9,7 @@ class Maze {
     walls = new boolean[50][50];
   }
   void display() {
-    stroke(0);
+    stroke(255, 160, 10);
     fill(255, 160, 10);
     for (int i=0; i< 50; i++) {
       for (int j=0; j< 50; j++) {
