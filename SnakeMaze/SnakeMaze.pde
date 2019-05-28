@@ -13,7 +13,7 @@ void setup() {
   gameScreen = 0;
   lizard = new Snake();
   hunger = new Food();
-  //maze = new Maze();
+  maze = new Maze();
 }
 
 void draw() {
@@ -21,17 +21,18 @@ void draw() {
   if (gameScreen == 0) {
     displayStartingScreen();
     //game screeen
-  } else if (lizard.isTouching() || cheat == 5 || moves == 50.0) {
+  } else if (lizard.isTouching() || endGame() || moves == 50.0) {
     displayEndScreen();
-  } else if (lizard.leng == 15) {
+  } else if (lizard.leng == 15 || cheat == 5.0) {
     displayWinScreen();
   } else if (gameScreen == 1) {
     background(255); 
     lizard.move();
     lizard.display();
     hunger.display();
+    maze.display();
     playGame();
-    //death screen
+    maze.returnStatus();
   }
 }
 
@@ -39,19 +40,19 @@ void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT) {
       lizard.direction = 1;
-      moves = moves + 0.1;
+      //moves = moves + 0.1;
     }
     if (keyCode == UP) {
       lizard.direction = 2;
-      moves = moves + 0.1;
+      //moves = moves + 0.1;
     }
     if (keyCode == LEFT) {
       lizard.direction = 3;
-      moves = moves + 0.1;
+      //moves = moves + 0.1;
     }
     if (keyCode == DOWN) {
       lizard.direction = 0;
-      moves = moves + 0.1;
+      //moves = moves + 0.1;
     }
   }
   if (key == TAB) {
@@ -87,6 +88,14 @@ void playGame() {
     lizard.grow();
   }
 }
+
+boolean endGame() {
+  if ( dist(maze.xcor, maze.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size) {
+    return true;
+  }
+  return false;
+}
+
 void displayWinScreen() {
   textAlign(CENTER);
   fill(30);
