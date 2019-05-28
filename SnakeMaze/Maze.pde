@@ -7,10 +7,10 @@ class Maze {
 
   Maze() {
     walls = new boolean[50][50];
-    stroke(0);
-    fill(153);
   }
   void display() {
+    stroke(0);
+    fill(255, 160, 10);
     for (int i=0; i< 50; i++) {
       for (int j=0; j< 50; j++) {
         if (i==0 || i==49 || j==0 || j==49) {
