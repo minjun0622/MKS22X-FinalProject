@@ -27,6 +27,8 @@ void draw() {
     displayWinScreen();
   } else if (gameScreen == 1) {
     background(255); 
+    fill(#F01313);
+    displayScore();
     lizard.move();
     lizard.display();
     hunger.display();
@@ -101,4 +103,9 @@ void displayWinScreen() {
   fill(30);
   textSize(45);
   text("You won!", height/2, width/2);
+}
+
+void displayScore() {
+  text("Needs to be longer than 15 to win", height/2, (width / 2) + 100);
+  text(lizard.leng, height/2, width/2);
 }
