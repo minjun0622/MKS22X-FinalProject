@@ -52,9 +52,11 @@ class Snake {
 
   //equivalent to a die method. 
   //actually nope.
+  /*
   void reset() {
-    leng = 1;
-  }
+   leng = 1;
+   }
+   */
 
 
   //boolean method that show whether the snake is touching the other pieces.
