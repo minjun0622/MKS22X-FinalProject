@@ -7,7 +7,7 @@ class Maze {
 
 
   Maze() {
-    walls = new boolean[50][50];
+    walls = new boolean[30][30];
     String[] coordinates = loadStrings("coordinates.txt");
     for (int i=0; i<coordinates.length; i++) {
       int[] cors;
@@ -26,12 +26,14 @@ class Maze {
   void display() {
     stroke(255, 160, 10);
     fill(255, 160, 10);
-    for (int i=0; i< 50; i++) {
-      for (int j=0; j< 50; j++) {
-        if (i==0 || i==49 || j==0 || j==49) {
-          rect(i*12, j*12, 12, 12);
+    for (int i=0; i< 30; i++) {
+      for (int j=0; j< 30; j++) {
+        if (i==0 || i==29 || j==0 || j==29) {
+          rect(i*20, j*20, 20, 20);
         }
         if (walls[i][j]==true) {
+          walls[i][j]=true;
+          rect(i*20, j*20, 20, 20);
           if (chances < 30) {
             walls[i][j]=true;
 
@@ -44,8 +46,8 @@ class Maze {
 
 
   boolean returnStatus() {
-    for (int i = 0; i < 50; i++) {
-      for (int j = 0; j < 50; j++) {
+    for (int i = 0; i < 30; i++) {
+      for (int j = 0; j < 30; j++) {
         if (walls[i][j]) {
           return true;
         }
@@ -53,9 +55,13 @@ class Maze {
     }
     return false;
   }
+<<<<<<< HEAD
+}
+=======
   void denseMaze() {
   }
 
   void littleMaze() {
   }
 }
+>>>>>>> 1903c8427e8c2295204e0ab8850f1460fe2e21bb

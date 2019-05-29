@@ -1,5 +1,5 @@
 //Final Project Experimentation code.
-Maze walls;
+maze walls;
 
 int direction; 
 
@@ -7,7 +7,7 @@ void setup() {
   size(1000, 1000);
   frameRate(10);
   background(225);
-  walls = new Maze();
+  walls = new maze();
 }
 
 void draw() {
@@ -20,11 +20,7 @@ void draw() {
   if (direction == 3) {
     rect(300, 100, 300, 100);
   }
-  for (int i = 0; i < 50; i++) {
-    for (int j = 0; j < 50; j++) {
-      if (walls[i][j])
-    }
-  }
+  walls.display();
 }
 
 //RIGHT = 1
