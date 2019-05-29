@@ -1,6 +1,6 @@
 Snake lizard;
 Food hunger;
-boolean end; 
+boolean end;
 Maze maze;
 int gameScreen;
 //increment counter for "cheating or ending the game."
@@ -26,7 +26,7 @@ void draw() {
   } else if (lizard.leng >= 15 || cheat >= 5.0) {
     displayWin();
   } else if (gameScreen == 1) {
-    background(255); 
+    background(255);
     fill(#F01313);
     scoreBoard();
     lizard.move();
@@ -58,7 +58,7 @@ void keyPressed() {
   }
   if (key == TAB) {
     gameScreen = 1;
-    //end game 
+    //end game
     cheat++;
   }
 }
