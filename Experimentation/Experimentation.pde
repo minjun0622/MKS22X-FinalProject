@@ -1,4 +1,5 @@
 //Final Project Experimentation code.
+Maze walls;
 
 int direction; 
 
@@ -6,6 +7,7 @@ void setup() {
   size(1000, 1000);
   frameRate(10);
   background(225);
+  walls = new Maze();
 }
 
 void draw() {
