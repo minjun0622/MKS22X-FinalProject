@@ -53,4 +53,9 @@ class Maze {
     }
     return false;
   }
+  void denseMaze() {
+  }
+
+  void littleMaze() {
+  }
 }
