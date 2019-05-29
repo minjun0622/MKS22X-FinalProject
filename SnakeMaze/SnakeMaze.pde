@@ -7,9 +7,10 @@ int gameScreen;
 int cheat;
 float moves = 0;
 
+
 void setup() {
   size(600, 600);
-  frameRate(20);
+  frameRate(30);
   gameScreen = 0;
   maze = new Maze();
   lizard = new Snake();
@@ -62,6 +63,7 @@ void keyPressed() {
     cheat++;
   }
 }
+
 
 void displayStartingScreen() {
   background(#0A35FF);
