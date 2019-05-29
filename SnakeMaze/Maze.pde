@@ -27,7 +27,6 @@ class Maze {
     }
     stroke(21, 24, 64);
     fill(255);
-    >>>>>>> 144be7f775b7be2798a16cd25bd9b2ea564fa8a9
   }
 
   void display() {
@@ -41,7 +40,6 @@ class Maze {
         if (walls[i][j]==true) {
           if (chances < 30) {
             walls[i][j]=true;
-            >>>>>>> 144be7f775b7be2798a16cd25bd9b2ea564fa8a9
               rect(i*12, j*12, 12, 12);
           }
         }
