@@ -14,6 +14,11 @@ class Maze {
       cors=int(split(coordinates[i], ","));
       walls[cors[0]][cors[1]]=true;
     }
+    for (int i = 0; i < 50; i++) {
+      for (int j = 0; j < 50; j++) {
+        walls[i][j] = false;
+      }
+    }
     stroke(21, 24, 64);
     fill(255);
   }
@@ -29,6 +34,11 @@ class Maze {
         if (walls[i][j]==true) {
           walls[i][j]=true;
           rect(i*20, j*20, 20, 20);
+          if (chances < 30) {
+            walls[i][j]=true;
+
+            rect(i*12, j*12, 12, 12);
+          }
         }
       }
     }

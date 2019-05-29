@@ -28,13 +28,16 @@ The weekend, got a loading screen working that was similar to the end screen. Us
 Since it's the weekend, I was busy studying for SAT. Not an excuse! Sorry!
 However, I realized that something in the draw could be transformed into a method so I turned it into a method called playGame(). Adding that to my prototype.
 I was thinking of a pause menu or a cheat code where you can instantly enter codes that will complete a game.
-I will attempt to work on the maze. My partner didn't finish it yet.
-
-5/27/19
-I made a win screen work when the game reached 15 lengths. Instead of loading another screen, I just froze the game screen and displayed text. I'm so tired lol.
+I will attempt to work on the maze. My partner didn't finish it yet. I made a win screen work when the game reached 15 lengths. Instead of loading another screen, I just froze the game screen and displayed text. I'm so tired lol.
 
 5/28/19
-Before class, I just adjusted the amount of moves maximum and just commented it out will implement if needed. I'm trying to get the maze working but I am not making much progress and I am just trying to get the snake to die. I have looked over the code for the maze border generation, I am trying to 
+Before class, I just adjusted the amount of moves maximum and just commented it out will implement if needed. I'm trying to get the maze working but I am not making much progress and I am just trying to get the snake to die. I have looked over the code for the maze border generation, I am trying to work on other functions of the game. Basically the minimum is done.
+
+5/29/19
+# There are some of the features that I would like the game to have
+- Changing the frame rate (which is basically the speed)
+- Changing the rate at which the snake can grow when they encounter the food. So for one food, it has the chance of growing 2 rather than one.
+- No maze, not really maze, dense maze. 
 
 
 5/21/19

@@ -5,6 +5,7 @@ class Snake {
   ArrayList <Float> xcor, ycor;
   int direction;
 
+
   Snake() {
     stroke(0);
     rect(0, 0, 12, 12);
