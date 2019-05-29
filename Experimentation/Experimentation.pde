@@ -18,6 +18,11 @@ void draw() {
   if (direction == 3) {
     rect(300, 100, 300, 100);
   }
+  for (int i = 0; i < 50; i++) {
+    for (int j = 0; j < 50; j++) {
+      if (walls[i][j])
+    }
+  }
 }
 
 //RIGHT = 1

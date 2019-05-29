@@ -10,7 +10,7 @@ float moves = 0;
 
 void setup() {
   size(600, 600);
-  frameRate(30);
+  frameRate(25);
   gameScreen = 0;
   maze = new Maze();
   lizard = new Snake();
@@ -21,12 +21,17 @@ void draw() {
   //starting menu
   if (gameScreen == 0) {
     displayStartingScreen();
-    //game screeen
-  } else if (lizard.isTouching() || moves == 50.0) {
+  }
+  //----------------------------
+  else if (lizard.isTouching() || moves == 50.0) {
     displayEndScreen();
-  } else if (lizard.leng >= 15 || cheat >= 5.0) {
+  } 
+  //----------------------------
+  else if (lizard.leng >= 15 || cheat >= 5.0) {
     displayWin();
-  } else if (gameScreen == 1) {
+  } 
+  //----------------------------
+  else if (gameScreen == 1) {
     background(255);
     fill(#F01313);
     scoreBoard();
@@ -42,19 +47,19 @@ void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT) {
       lizard.direction = 1;
-      //moves = moves + 0.1;
+      moves = moves + 0.1;
     }
     if (keyCode == UP) {
       lizard.direction = 2;
-      //moves = moves + 0.1;
+      moves = moves + 0.1;
     }
     if (keyCode == LEFT) {
       lizard.direction = 3;
-      //moves = moves + 0.1;
+      moves = moves + 0.1;
     }
     if (keyCode == DOWN) {
       lizard.direction = 0;
-      //moves = moves + 0.1;
+      moves = moves + 0.1;
     }
   }
   if (key == TAB) {
@@ -64,7 +69,14 @@ void keyPressed() {
   }
 }
 
+void playGame() {
+  if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
+    hunger.reset();
+    lizard.grow();
+  }
+}
 
+//DISPLAY METHODS--------------------------------------------------------------------------------
 void displayStartingScreen() {
   background(#0A35FF);
   textAlign(CENTER, BOTTOM);
@@ -85,20 +97,6 @@ void displayEndScreen() {
   text("You died =(", height/2, width/ 2);
   text("If you want to win, get a length of 15 or don't touch the maze.", height/2, width - 50);
 }
-void playGame() {
-  if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
-    hunger.reset();
-    lizard.grow();
-  }
-}
-/*
-boolean endGame() {
- if ( dist(maze.xcor, maze.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size || maze.returnStatus()) {
- return true;
- }
- return false;
- }
- */
 
 void displayWin() {
   textAlign(CENTER);
@@ -111,3 +109,4 @@ void scoreBoard() {
   text("Needs to be longer than 15 to win", height/2, (width / 2) + 100);
   text(lizard.leng, height/2, width/2);
 }
+//------------------------------------------------------------------------------------------------
