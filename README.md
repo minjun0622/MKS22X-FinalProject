@@ -37,9 +37,7 @@ Before class, I just adjusted the amount of moves maximum and just commented it 
 # There are some of the features that I would like the game to have
 - Changing the frame rate (which is basically the speed)
 - Changing the rate at which the snake can grow when they encounter the food. So for one food, it has the chance of growing 2 rather than one.
-- No maze, not really maze, dense maze.
-
-
+- No maze, not really maze, dense maze. 
 
 
 5/21/19
@@ -52,3 +50,12 @@ The walls make the borders properly and is divided up properly. Background and c
 
 5/22/19
 Had to fix the files since we were using different tabs. The main file is now the SnakeMaze one.
+
+5/28/19
+Changed up the colors for the Maze and made the snake colors a bit more vivid and changing. 
+Made a coordinates.txt to type out coordinates for the game walls in there.
+Reads file and loops through each coordinate and places a wall at that place in the map.
+
+5/29/19
+Using coordinates.txt to make the map. Planning out the design
+
