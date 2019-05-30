@@ -26,6 +26,9 @@ class Maze {
         if (i==0 || i==29 || j==0 || j==29) {
           rect(i*20, j*20, 20, 20);
         }
+        if (walls[i][j]==true) {
+          rect(i*20, j*20, 20, 20);
+        }
       }
     }
   }

@@ -11,7 +11,7 @@ float reset;
 
 void setup() {
   size(600, 600);
-  frameRate(25);
+  frameRate(14);
   gameScreen = 0;
   moves = 0;
   maze = new Maze();
