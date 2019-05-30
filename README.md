@@ -51,6 +51,17 @@ The walls make the borders properly and is divided up properly. Background and c
 5/22/19
 Had to fix the files since we were using different tabs. The main file is now the SnakeMaze one.
 
+5/23/19
+Made the Food class. Worked on a simple display that will be altered to something more complex later on.
+Fixed maze and made sure any boxes that are walls as true.
+
+5/24/19
+Made the size of the food more optimable for the snake.
+The colors of the maze were altered to something more appealing.
+
+5/25/19
+Changing the display of the game to show the maze at a constant.
+
 5/28/19
 Changed up the colors for the Maze and made the snake colors a bit more vivid and changing. 
 Made a coordinates.txt to type out coordinates for the game walls in there.
