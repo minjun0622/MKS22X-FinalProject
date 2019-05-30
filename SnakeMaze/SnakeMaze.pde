@@ -6,6 +6,7 @@ int gameScreen;
 //increment counter for "cheating or ending the game."
 float cheat;
 float moves;
+float reset;
 
 
 void setup() {
@@ -16,6 +17,7 @@ void setup() {
   maze = new Maze();
   lizard = new Snake();
   hunger = new Food();
+  reset = 0;
 }
 
 void draw() {
@@ -68,8 +70,8 @@ void keyPressed() {
     //end game
     cheat++;
   }
-  if (key == 'B'){
-    
+  if (key == 'r') {
+    reset++;
   }
 }
 
