@@ -37,7 +37,9 @@ Before class, I just adjusted the amount of moves maximum and just commented it 
 # There are some of the features that I would like the game to have
 - Changing the frame rate (which is basically the speed)
 - Changing the rate at which the snake can grow when they encounter the food. So for one food, it has the chance of growing 2 rather than one.
-- No maze, not really maze, dense maze. 
+- No maze, not really maze, dense maze.
+
+
 
 
 5/21/19

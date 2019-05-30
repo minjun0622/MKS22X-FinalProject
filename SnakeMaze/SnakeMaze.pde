@@ -4,14 +4,15 @@ boolean end;
 Maze maze;
 int gameScreen;
 //increment counter for "cheating or ending the game."
-int cheat;
-float moves = 0;
+float cheat;
+float moves;
 
 
 void setup() {
   size(600, 600);
   frameRate(25);
   gameScreen = 0;
+  moves = 0;
   maze = new Maze();
   lizard = new Snake();
   hunger = new Food();
@@ -66,6 +67,9 @@ void keyPressed() {
     gameScreen = 1;
     //end game
     cheat++;
+  }
+  if (key == 'B'){
+    
   }
 }
 

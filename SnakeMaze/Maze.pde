@@ -3,7 +3,7 @@ class Maze {
   boolean open;
   boolean [][] walls;
   ArrayList <Float> xcor, ycor;
-  float chances = random(100);
+
 
 
   Maze() {
@@ -16,7 +16,6 @@ class Maze {
     }
     for (int i = 0; i < 50; i++) {
       for (int j = 0; j < 50; j++) {
-        walls[i][j] = false;
       }
     }
     stroke(21, 24, 64);
@@ -30,20 +29,16 @@ class Maze {
       for (int j=0; j< 30; j++) {
         if (i==0 || i==29 || j==0 || j==29) {
           rect(i*20, j*20, 20, 20);
-        }
-        if (walls[i][j]==true) {
-          walls[i][j]=true;
-          rect(i*20, j*20, 20, 20);
-          if (chances < 30) {
-            walls[i][j]=true;
-
-            rect(i*12, j*12, 12, 12);
+          walls[i][j] = true;
+          /*if (walls[i][j]) {
+            fill (#ED8C16);
           }
+          */
         }
+        rect(i*20, j*20, 20, 20);
       }
     }
   }
-
 
   boolean returnStatus() {
     for (int i = 0; i < 30; i++) {
@@ -55,13 +50,11 @@ class Maze {
     }
     return false;
   }
-<<<<<<< HEAD
-}
-=======
+
+
   void denseMaze() {
   }
 
   void littleMaze() {
   }
 }
->>>>>>> 1903c8427e8c2295204e0ab8850f1460fe2e21bb
