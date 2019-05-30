@@ -5,33 +5,43 @@ Maze maze;
 int gameScreen;
 //increment counter for "cheating or ending the game."
 float cheat;
-float moves;
-float reset;
+int moves;
+boolean snakeDied;
 
 
 void setup() {
   size(600, 600);
-  frameRate(25);
+  frameRate(14);
   gameScreen = 0;
   moves = 0;
   maze = new Maze();
   lizard = new Snake();
   hunger = new Food();
-  reset = 0;
+  snakeDied = false;
 }
 
 void draw() {
+  inGame();
+  if (snakeDied) {
+    inGame();
+  }
+  //starting menu
+}
+
+void inGame() {
   //starting menu
   if (gameScreen == 0) {
     displayStartingScreen();
   }
   //----------------------------
-  else if (lizard.isTouching() || moves == 50.0) {
+  else if (lizard.isTouching() || moves == 500) {
     displayEndScreen();
+    snakeDied = true;
   } 
   //----------------------------
   else if (lizard.leng >= 15 || cheat >= 5.0) {
     displayWin();
+    snakeDied = true;
   } 
   //----------------------------
   else if (gameScreen == 1) {
@@ -50,28 +60,25 @@ void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT) {
       lizard.direction = 1;
-      moves = moves + 0.1;
+      moves +=  1;
     }
     if (keyCode == UP) {
       lizard.direction = 2;
-      moves = moves + 0.1;
+      moves += 1;
     }
     if (keyCode == LEFT) {
       lizard.direction = 3;
-      moves = moves + 0.1;
+      moves += 1;
     }
     if (keyCode == DOWN) {
       lizard.direction = 0;
-      moves = moves + 0.1;
+      moves += 1;
     }
   }
   if (key == TAB) {
     gameScreen = 1;
     //end game
     cheat++;
-  }
-  if (key == 'r') {
-    reset++;
   }
 }
 
@@ -101,7 +108,7 @@ void displayEndScreen() {
   fill(255);
   textSize(20);
   text("You died =(", height/2, width/ 2);
-  text("If you want to win, get a length of 15 or don't touch the maze.", height/2, width - 50);
+  text("Get a length of 15 or don't touch the maze to win!", height/2, width - 50);
 }
 
 void displayWin() {
@@ -114,5 +121,6 @@ void displayWin() {
 void scoreBoard() {
   text("Needs to be longer than 15 to win", height/2, (width / 2) + 100);
   text(lizard.leng, height/2, width/2);
+  text("Number of moves left:" + (500 - moves), height/2, width / 4);
 }
 //------------------------------------------------------------------------------------------------
