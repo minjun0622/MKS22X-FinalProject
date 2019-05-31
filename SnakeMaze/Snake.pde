@@ -10,12 +10,12 @@ class Snake {
     rect(0, 0, 12, 12);
     stroke(#000000);
     leng = 1;
-    size = 12;
+    size = 20;
     //arraylist because it's easier to add the coordinate values to it. 
     xcor = new ArrayList();
     ycor = new ArrayList();
-    xcor.add( random(width - 150) );
-    ycor.add( random(height - 150) );
+    xcor.add( 20.0);
+    ycor.add( 20.0);
   }
 
   void grow() {

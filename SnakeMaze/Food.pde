@@ -8,7 +8,7 @@ class Food {
   }
   void display() {
     stroke(0);
-    fill(255, 160, 10);
+    fill(#FFFFFF);
     rect(xcor, ycor, 12, 12);
   }
   void reset() {

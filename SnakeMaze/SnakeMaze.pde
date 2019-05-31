@@ -11,7 +11,7 @@ boolean snakeDied;
 
 void setup() {
   size(600, 600);
-  frameRate(14);
+  frameRate(12);
   gameScreen = 0;
   moves = 0;
   maze = new Maze();
