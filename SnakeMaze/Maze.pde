@@ -3,11 +3,11 @@ class Maze {
   boolean open;
   boolean [][] walls;
   ArrayList <Float> xcor, ycor;
-  float chances = random(100);
-
 
   Maze() {
     walls = new boolean[30][30];
+    xcor = new ArrayList();
+    ycor = new ArrayList();
     String[] coordinates = loadStrings("coordinates.txt");
     for (int i=0; i<coordinates.length; i++) {
       int[] cors;
@@ -19,7 +19,7 @@ class Maze {
   }
 
   void display() {
-    stroke(255, 160, 10);
+    stroke(#000000);
     fill(255, 160, 10);
     for (int i=0; i< 30; i++) {
       for (int j=0; j< 30; j++) {
@@ -39,11 +39,5 @@ class Maze {
       }
     }
     return false;
-  }
-
-  void denseMaze() {
-  }
-
-  void littleMaze() {
   }
 }

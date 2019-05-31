@@ -7,8 +7,8 @@ class Snake {
 
 
   Snake() {
-    stroke(0);
     rect(0, 0, 12, 12);
+    stroke(#000000);
     leng = 1;
     size = 12;
     //arraylist because it's easier to add the coordinate values to it. 
