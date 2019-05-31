@@ -43,14 +43,4 @@ class Maze {
     }
     return false;
   }
-<<<<<<< HEAD
 }
-=======
-
-  void denseMaze() {
-  }
-
-  void littleMaze() {
-  }
-}
->>>>>>> 571356f182aa9de8e77b32b4fdd642ff6cd2db6c

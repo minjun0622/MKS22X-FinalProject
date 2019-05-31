@@ -99,6 +99,7 @@ void displayStartingScreen() {
   textSize(30);
   text("Have fun!", height/2, width/4);
   textSize(25);
+  text("Needs to be longer than 15 to win", height/2, (width / 2) + 100);
   text("Game by Minjun Seo and Mihad Khondker", height/2, width- 50);
 }
 
@@ -119,7 +120,6 @@ void displayWin() {
 }
 
 void scoreBoard() {
-  text("Needs to be longer than 15 to win", height/2, (width / 2) + 100);
   text(lizard.leng, height/2, width/2);
   text("Number of moves left:" + (500 - moves), height/2, width / 4);
 }
