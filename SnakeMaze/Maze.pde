@@ -20,11 +20,13 @@ class Maze {
 
   void display() {
     stroke(#000000);
-    fill(255, 160, 10);
+    fill(#03B8FC);
     for (int i=0; i< 30; i++) {
       for (int j=0; j< 30; j++) {
         if (i==0 || i==29 || j==0 || j==29) {
           rect(i*20, j*20, 20, 20);
+          xcor.add(i * 20.0);
+          ycor.add(j * 20.0);
         }
         if (walls[i][j]==true) {
           rect(i*20, j*20, 20, 20);

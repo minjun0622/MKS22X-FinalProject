@@ -45,7 +45,7 @@ void inGame() {
   } 
   //----------------------------
   else if (gameScreen == 1) {
-    background(#FFC771);
+    background(#FF0000);
     fill(#F01313);
     scoreBoard();
     lizard.move();
