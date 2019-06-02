@@ -121,6 +121,6 @@ void displayWin() {
 
 void scoreBoard() {
   text(lizard.leng, height/2, width/2);
-  text("Number of moves left:" + (500 - moves), height/2, width / 4);
+  text("Moves left:" + (500 - moves), height/2, width / 4 - 30);
 }
 //------------------------------------------------------------------------------------------------
