@@ -3,8 +3,8 @@ class Food {
   float xcor;
   float ycor;
   Food() {
-    xcor = (int)random(10) * 20.0;
-    ycor = (int)random(10) * 20.0;
+    xcor = (int)random(1, 29) * 20.0;
+    ycor = (int)random(1, 29) * 20.0;
   }
 
   void display() {
@@ -14,7 +14,7 @@ class Food {
   }
 
   void reset() {
-    xcor = (int)random(10) * 20.0;
-    ycor = (int)random(10) * 20.0;
+    xcor = (int)random(1, 29) * 20.0;
+    ycor = (int)random(1, 29) * 20.0;
   }
 }
