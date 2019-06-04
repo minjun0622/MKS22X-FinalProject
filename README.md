@@ -50,7 +50,16 @@ I had the SAT and the Champions League so I was not able to get a lot done for t
 Changed the plans just a bit.
 - Speed has been shifted for difficulty purposes.
 - There will be one maze I think due to time constraints, maybe we can fix that.
+- Changing food is pointless.
 
+6/2/19
+Made the food inside the maze avoid the walls by limiting it from 1-29 however, it still spawns inside the maze structure so I have to fix that.
+
+6/3/19
+Got the arraylist to store the coordinates of the maze and the highlighted tiles. However, I still don't understand what to do with it. There is a problem getting the distance and I don't know why the problem is there. Will consult with my partner.
+
+6/4/19
+Last day! I got the reset feature to work by pressing the r key. 
 
 5/21/19
 # Mihad
