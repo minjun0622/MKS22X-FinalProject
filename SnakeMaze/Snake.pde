@@ -22,12 +22,7 @@ class Snake {
     xcor.add( xcor.get(leng-1) + size);
     ycor.add( ycor.get(leng-1) + size);
     leng++;
-    for (int i = 0; i < xcor.size(); i++) {
-      println(xcor.get(i) / 20);
-      println(ycor.get(i) / 20);
-    }
   }
-
 
   //RIGHT = 1
   //UP = 2
@@ -52,15 +47,6 @@ class Snake {
       xcor.set(0, xcor.get(0) - size);
     }
   }
-
-  //equivalent to a die method. 
-  //actually nope.
-  /*
-  void reset() {
-   leng = 1;
-   }
-   */
-
 
   //boolean method that show whether the snake is touching the other pieces.
   boolean isTouching() {

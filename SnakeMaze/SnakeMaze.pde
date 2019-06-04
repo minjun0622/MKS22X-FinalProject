@@ -5,8 +5,6 @@ int gameScreen;
 //increment counter for "cheating or ending the game."
 float cheat;
 int moves;
-boolean snakeDied;
-
 
 void setup() {
   size(600, 600);
@@ -75,10 +73,12 @@ void keyPressed() {
   if (key == '1') {
     gameScreen = 1;
     //end game
-    cheat++;
   }
   if (key == '2') {
     gameScreen = 2;
+  }
+  if (key == TAB) {
+    cheat++;
   }
   if (key == 'r') {
     setup();
@@ -95,12 +95,13 @@ void playGame() {
   }
 }
 
+
 //DISPLAY METHODS--------------------------------------------------------------------------------
 void displayStartingScreen() {
   background(#0A35FF); 
   textAlign(CENTER, BOTTOM); 
   textSize(30); 
-  text("Press the TAB key to start the game!", height/2, width/2); 
+  text("1/2, 1 = No maze, 2 = Maze", height/2, width/2); 
   textAlign(CENTER); 
   textSize(30); 
   text("Have fun!", height/2, width/4); 

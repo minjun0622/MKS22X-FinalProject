@@ -59,23 +59,13 @@ class Maze {
     }
   }
 
-  boolean returnStatus() {
-    for (int i = 0; i < 30; i++) {
-      for (int j = 0; j < 30; j++) {
-        if (walls[i][j]) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-
   void addPoints() {
     for (int i = 0; i < 30; i++) {
       for (int j = 0; j < 30; j++) {
         if (walls[i][j] || i==0 || i==29 || j==0 || j==29) {
           xcor.add((float)i);
           ycor.add((float)j);
+          println(xcor.get(i) +  " " + ycor.get(i));
         }
       }
     }
