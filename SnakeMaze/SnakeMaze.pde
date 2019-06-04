@@ -17,18 +17,9 @@ void setup() {
   maze = new Maze();
   lizard = new Snake();
   hunger = new Food();
-  snakeDied = false;
 }
 
 void draw() {
-  inGame();
-  if (snakeDied) {
-    inGame();
-  }
-  //starting menu
-}
-
-void inGame() {
   //starting menu
   if (gameScreen == 0) {
     displayStartingScreen();
@@ -36,12 +27,10 @@ void inGame() {
   //----------------------------
   else if (lizard.isTouching() || moves == 500) {
     displayEndScreen();
-    snakeDied = true;
   } 
   //----------------------------
   else if (lizard.leng >= 15 || cheat >= 5.0) {
     displayWin();
-    snakeDied = true;
   } 
   //----------------------------
   else if (gameScreen == 1) {
@@ -87,40 +76,47 @@ void playGame() {
     hunger.reset();
     lizard.grow();
   }
+  for (int i = 0; i < maze.xcor.size(); i++) {
+    for (int j = 0; j < maze.ycor.size(); j++) {
+      if ( dist(maze.xcor.get(i), maze.ycor.get(j), lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size) {
+        displayEndScreen();
+      }
+    }
+  }
 }
 
 //DISPLAY METHODS--------------------------------------------------------------------------------
 void displayStartingScreen() {
-  background(#0A35FF);
-  textAlign(CENTER, BOTTOM);
-  textSize(30);
-  text("Press the TAB key to start the game!", height/2, width/2);
-  textAlign(CENTER);
-  textSize(30);
-  text("Have fun!", height/2, width/4);
-  textSize(25);
-  text("Needs to be longer than 15 to win", height/2, (width / 2) + 100);
+  background(#0A35FF); 
+  textAlign(CENTER, BOTTOM); 
+  textSize(30); 
+  text("Press the TAB key to start the game!", height/2, width/2); 
+  textAlign(CENTER); 
+  textSize(30); 
+  text("Have fun!", height/2, width/4); 
+  textSize(25); 
+  text("Needs to be longer than 15 to win", height/2, (width / 2) + 100); 
   text("Game by Minjun Seo and Mihad Khondker", height/2, width- 50);
 }
 
 void displayEndScreen() {
-  background(0);
-  textAlign(CENTER);
-  fill(255);
-  textSize(20);
-  text("You died =(", height/2, width/ 2);
+  background(0); 
+  textAlign(CENTER); 
+  fill(255); 
+  textSize(20); 
+  text("You died =(", height/2, width/ 2); 
   text("Get a length of 15 or don't touch the maze to win!", height/2, width - 50);
 }
 
 void displayWin() {
-  textAlign(CENTER);
-  fill(30);
-  textSize(45);
+  textAlign(CENTER); 
+  fill(30); 
+  textSize(45); 
   text("You won!", height/2, width/2);
 }
 
 void scoreBoard() {
-  text(lizard.leng, height/2, width/2);
+  text(lizard.leng, height/2, width/2); 
   text("Moves left:" + (500 - moves), height/2, width / 4 - 30);
 }
 //------------------------------------------------------------------------------------------------
