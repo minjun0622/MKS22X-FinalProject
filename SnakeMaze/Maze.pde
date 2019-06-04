@@ -2,25 +2,26 @@
 class Maze {
   boolean open;
   boolean [][] walls;
-  ArrayList <String> coor;
+  ArrayList <Float> xcor, ycor, coor;
 
   Maze() {
     walls = new boolean[30][30];
-    coor = new ArrayList();
-    String[] coordinates = loadStrings("coordinates.txt");
-    for (int i=0; i<coordinates.length; i++) {
-      int[] cors;
-      cors= int(split(coordinates[i], ","));
-      coor.add(coordinates[i]);   
-      walls[cors[0]][cors[1]]=true;
-    }
-    stroke(21, 24, 64);
-    fill(255);
+    xcor = new ArrayList();
+    ycor = new ArrayList();
   }
 
   void display() {
+
+    stroke(21, 24, 64);
+    fill(255);
+    String[] coordinates = loadStrings("coordinates.txt");
+    int[] cors;
+    for (int i=0; i < coordinates.length; i++) {
+      cors= int(split(coordinates[i], ","));
+      walls[cors[0]][cors[1]]=true;
+    }
     stroke(#000000);
-    fill(#03B8FC);
+    fill(#03B8FC);   
     //--------------------------------------
     //Makes the walls of the maze boxed.
     for (int i=0; i< 30; i++) {

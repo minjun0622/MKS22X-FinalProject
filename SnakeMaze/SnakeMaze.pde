@@ -41,7 +41,6 @@ void inGame() {
   //----------------------------
   else if (lizard.leng >= 15 || cheat >= 5.0) {
     displayWin();
-    maze.walls[30][26] = false;
     snakeDied = true;
   } 
   //----------------------------
