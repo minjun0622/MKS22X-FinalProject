@@ -39,7 +39,16 @@ void draw() {
     lizard.move();
     lizard.display();
     hunger.display();
-    maze.display();
+    maze.display(1);
+    playGame();
+  } else if (gameScreen == 2) {
+    background(#D0FF03);
+    fill(#FF0000);
+    scoreBoard();
+    lizard.move();
+    lizard.display();
+    hunger.display();
+    maze.display(2);
     playGame();
   }
 }
@@ -63,15 +72,18 @@ void keyPressed() {
       moves += 1;
     }
   }
-  if (key == TAB) {
+  if (key == '1') {
     gameScreen = 1;
     //end game
     cheat++;
   }
+  if (key == '2') {
+    gameScreen = 2;
+  }
   if (key == 'r') {
     setup();
     gameScreen = 0;
-    cheat -= 5;
+    cheat -= 5.0 ;
   }
 }
 
@@ -104,7 +116,7 @@ void displayEndScreen() {
   textSize(20); 
   text("You died =(", height/2, width/ 2); 
   text("Get a length of 15 or don't touch the maze to win!", height/2, width - 50);
-  text("Press r to restart!", height /2, width + 50);
+  text("Press r to restart!", height /2, width - 200);
 }
 
 void displayWin() {
