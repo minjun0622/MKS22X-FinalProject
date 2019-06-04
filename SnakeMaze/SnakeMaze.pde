@@ -28,7 +28,7 @@ void draw() {
     displayEndScreen();
   } 
   //----------------------------
-  else if (lizard.leng >= 15 || cheat >= 5.0) {
+  else if (lizard.leng == 15 || cheat >= 5.0) {
     displayWin();
   } 
   //----------------------------
@@ -68,18 +68,15 @@ void keyPressed() {
     //end game
     cheat++;
   }
+  if (key == 'r') {
+    setup();
+    gameScreen = 0;
+    cheat -= 5;
+  }
 }
 
 //This the method that needs fixing!
 void playGame() {
-  /*for (int i = 0; i < maze.xcor.size(); i++) {
-   for (int j = 0; j < maze.ycor.size(); j++) {
-   if ( dist(maze.xcor.get(i), maze.ycor.get(j), (lizard.xcor.get(0) / 20.0), (lizard.ycor.get(0)) / 20.0) < lizard.size) {
-   displayEndScreen();
-   }
-   }
-   } 
-   */
   if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
     hunger.reset();
     lizard.grow();
@@ -107,6 +104,7 @@ void displayEndScreen() {
   textSize(20); 
   text("You died =(", height/2, width/ 2); 
   text("Get a length of 15 or don't touch the maze to win!", height/2, width - 50);
+  text("Press r to restart!", height /2, width + 50);
 }
 
 void displayWin() {

@@ -14,7 +14,7 @@ class Maze {
     for (int i=0; i < coordinates.length; i++) {
       int[] cors;
       cors= int(split(coordinates[i], ","));
-      walls[cors[0]][cors[1]]=true;
+      //walls[cors[0]][cors[1]]=true;
     }
     addPoints();
   }
