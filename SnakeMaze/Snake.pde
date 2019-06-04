@@ -7,22 +7,27 @@ class Snake {
 
 
   Snake() {
-    rect(0, 0, 12, 12);
+    rect(0, 0, 20, 20);
     stroke(#000000);
     leng = 1;
     size = 20;
     //arraylist because it's easier to add the coordinate values to it. 
     xcor = new ArrayList();
     ycor = new ArrayList();
-    xcor.add( (int)random(1-29)* 20.0);
-    ycor.add( (int)random(1-29)* 20.0);
+    xcor.add( (float)(13 * 20.0));
+    ycor.add( (float)(10 * 20.0));
   }
 
   void grow() {
     xcor.add( xcor.get(leng-1) + size);
     ycor.add( ycor.get(leng-1) + size);
     leng++;
+    for (int i = 0; i < xcor.size(); i++) {
+      println(xcor.get(i) / 20);
+      println(ycor.get(i) / 20);
+    }
   }
+  
 
   //RIGHT = 1
   //UP = 2

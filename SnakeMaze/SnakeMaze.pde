@@ -1,6 +1,5 @@
 Snake lizard;
 Food hunger;
-boolean end;
 Maze maze;
 int gameScreen;
 //increment counter for "cheating or ending the game."
@@ -71,17 +70,19 @@ void keyPressed() {
   }
 }
 
+//This the method that needs fixing!
 void playGame() {
+  /*for (int i = 0; i < maze.xcor.size(); i++) {
+   for (int j = 0; j < maze.ycor.size(); j++) {
+   if ( dist(maze.xcor.get(i), maze.ycor.get(j), (lizard.xcor.get(0) / 20.0), (lizard.ycor.get(0)) / 20.0) < lizard.size) {
+   displayEndScreen();
+   }
+   }
+   } 
+   */
   if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
     hunger.reset();
     lizard.grow();
-  }
-  for (int i = 0; i < maze.xcor.size(); i++) {
-    for (int j = 0; j < maze.ycor.size(); j++) {
-      if ( dist(maze.xcor.get(i), maze.ycor.get(j), lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size) {
-        displayEndScreen();
-      }
-    }
   }
 }
 
