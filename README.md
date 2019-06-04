@@ -34,13 +34,22 @@ I will attempt to work on the maze. My partner didn't finish it yet. I made a wi
 Before class, I just adjusted the amount of moves maximum and just commented it out will implement if needed. I'm trying to get the maze working but I am not making much progress and I am just trying to get the snake to die. I have looked over the code for the maze border generation, I am trying to work on other functions of the game. Basically the minimum is done.
 
 5/29/19
-# There are some of the features that I would like the game to have
+There are some of the features that I would like the game to have
 - Changing the frame rate (which is basically the speed)
 - Changing the rate at which the snake can grow when they encounter the food. So for one food, it has the chance of growing 2 rather than one.
 - No maze, not really maze, dense maze.
 
 5/30/19
 I am currently working on the feature that if a key is pressed, 'r', then the game would restart instantly without running the game again. I have put everything in the draw method into another method and set a boolean to keep track of the progress. Doesn't work right now though.
+
+5/31/19
+Last day of coding in school, I figured out with the help of Mr. K, why the snake was not matched with the world. I realized that the snake recognizes the world in multiples of 20 while the maze is just in increments of 1. I solved this problem by setting the size equal to 20 for snake as well as food and fixing the position of the snake in multiples of 20.
+
+6/1/19
+I had the SAT and the Champions League so I was not able to get a lot done for that day. However, it is still coming along. I have thought about the project a lot!
+Changed the plans just a bit.
+- Speed has been shifted for difficulty purposes.
+- There will be one maze I think due to time constraints, maybe we can fix that.
 
 
 5/21/19
