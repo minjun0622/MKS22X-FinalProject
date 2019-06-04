@@ -27,7 +27,7 @@ class Snake {
       println(ycor.get(i) / 20);
     }
   }
-  
+
 
   //RIGHT = 1
   //UP = 2
@@ -51,9 +51,6 @@ class Snake {
     if (direction == 3) {
       xcor.set(0, xcor.get(0) - size);
     }
-
-    xcor.set(0, (xcor.get(0) + width) % width);
-    ycor.set(0, (ycor.get(0) + height) % height);
   }
 
   //equivalent to a die method. 
