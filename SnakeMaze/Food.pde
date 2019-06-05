@@ -13,8 +13,19 @@ class Food {
     rect(xcor, ycor, 20, 20);
   }
 
-  void reset() {
-    xcor = (int)random(1, 29) * 20.0;
-    ycor = (int)random(1, 29) * 20.0;
+  void reset(ArrayList<Float> x, ArrayList<Float> y) {
+    for (int i = 0; i < x.size(); i++) {
+      for (int j = 0; j < y.size(); j++) {
+        float first = (int)random(1, 29) * 20.0;
+        float second = (int)random(1, 29) * 20.0;
+        if (first == x.get(i) && second == y.get(j)) {
+          xcor = (int)random(1, 29) * 20.0;
+          ycor = (int)random(1, 29) * 20.0;
+        } else {
+          xcor = first;
+          ycor = second;
+        }
+      }
+    }
   }
 }

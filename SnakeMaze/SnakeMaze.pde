@@ -1,4 +1,4 @@
-Snake lizard;
+Snake lizard; //<>//
 Food hunger;
 Maze maze;
 int gameScreen;
@@ -90,7 +90,7 @@ void keyPressed() {
 //This the method that needs fixing!
 void playGame() {
   if ( dist(hunger.xcor, hunger.ycor, lizard.xcor.get(0), lizard.ycor.get(0)) < lizard.size ) {
-    hunger.reset();
+    hunger.reset(maze.xcor, maze.ycor);
     lizard.grow();
   }
 }
