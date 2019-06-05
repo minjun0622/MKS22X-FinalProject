@@ -1,4 +1,4 @@
-Snake lizard;  //<>// //<>//
+Snake lizard;  //<>//
 Food hunger;
 Maze maze;
 int gameScreen;
@@ -30,6 +30,25 @@ void draw() {
     displayWin();
   } 
   //----------------------------
+  else if (gameScreen == 2) {
+    background(#D0FF03);
+    fill(#FF0000);
+    scoreBoard();
+    lizard.move();
+    lizard.display();
+    hunger.display();
+    maze.display(2);
+    playGame();
+  } else if (gameScreen == 3) {
+    background(#D0FF03);
+    fill(#FF0000);
+    scoreBoard();
+    lizard.move();
+    lizard.display();
+    hunger.display();
+    maze.display(3);
+    playGame();
+  }
   else if (gameScreen == 1) {
     background(#D0FF03);
     fill(#FF0000);
@@ -38,15 +57,6 @@ void draw() {
     lizard.display();
     hunger.display();
     maze.display(1);
-    playGame();
-  } else if (gameScreen == 2) {
-    background(#D0FF03);
-    fill(#FF0000);
-    scoreBoard();
-    lizard.move();
-    lizard.display();
-    hunger.display();
-    maze.display(2);
     playGame();
   }
 }
@@ -77,13 +87,14 @@ void keyPressed() {
   if (key == '2') {
     gameScreen = 2;
   }
+  if (key == '3') {
+    gameScreen = 3;
+  }
   if (key == TAB) {
     cheat++;
   }
   if (key == 'r') {
     setup();
-    gameScreen = 0;
-    cheat -= 5.0 ;
   }
 }
 
@@ -99,8 +110,8 @@ void playGame() {
 void displayStartingScreen() {
   background(#0A35FF); 
   textAlign(CENTER, BOTTOM); 
-  textSize(30); 
-  text("1/2, 1 = No maze, 2 = Maze", height/2, width/2); 
+  textSize(25); 
+  text("1/2/3, 1 = No border, 2 = Border, 3 = Maze", height/2, width/2); 
   textAlign(CENTER); 
   textSize(30); 
   text("Have fun!", height/2, width/4); 

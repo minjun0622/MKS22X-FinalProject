@@ -46,6 +46,8 @@ class Snake {
     if (direction == 3) {
       xcor.set(0, xcor.get(0) - size);
     }
+    xcor.set(0, (xcor.get(0) + width) % width);
+    ycor.set(0, (ycor.get(0) + height) % height);
   }
 
   //boolean method that show whether the snake is touching the other pieces.

@@ -17,8 +17,11 @@ class Maze {
     stroke(#000000);
     fill(#03B8FC);
     if (x == 1) {
+      noBorder();
+    }
+    if (x == 2) {
       noMaze();
-    } else if (x == 2) {
+    } if (x == 3) {
       yesMaze();
     }
   }
@@ -57,6 +60,9 @@ class Maze {
         }
       }
     }
+  }
+  
+  void noBorder() {
   }
 
   void addPoints() {

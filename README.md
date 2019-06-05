@@ -6,8 +6,8 @@
 This game is similar to the game of Snake, where a tiny square moves around the world collecting the little pieces of food that is dropped randomly across the world. However, my group put a twist on this game and made it take place inside a maze where there is harder obstacles.
 
 #Instructions for Playing the Game
-When loading the game, you have two options. Pressing the button 1, will trigger a world that only has a border. If number 2 is pressed, then a world that is a maze will be generated. You have the arrow keys to move around. When you died, just press the 'r' key and you can restart with the choice of pressing either 1 or 2.
-A cheat was added such that if TAB was pressed multiple times, then the game would automatically think you won! 
+When loading the game, you have three options. Pressing the button 1, will trigger a world that is free for you to roam. If number 2 is pressed, then a world with a border is generated. Pressing 3 in the startup menu spawns a menu. You have the arrow keys to move around. When you died, just press the 'r' key and you can restart with the choice of pressing either 1 or 2, 3
+A cheat was added such that if TAB was pressed multiple times, then the game would automatically think you won!
 
 #DEVlogs!
 # Minjun
