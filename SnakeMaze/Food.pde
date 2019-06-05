@@ -22,8 +22,8 @@ class Food {
           xcor = (int)random(1, 29) * 20.0;
           ycor = (int)random(1, 29) * 20.0;
         } else {
-          xcor = first;
-          ycor = second;
+          xcor = (int)random(1, 29) * 20.0;
+          ycor = (int) random(1, 29) * 20.0;
         }
       }
     }

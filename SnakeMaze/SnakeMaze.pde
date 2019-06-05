@@ -1,4 +1,4 @@
-Snake lizard; //<>//
+Snake lizard;  //<>//
 Food hunger;
 Maze maze;
 int gameScreen;
@@ -8,7 +8,7 @@ int moves;
 
 void setup() {
   size(600, 600);
-  frameRate(12);
+  frameRate(8);
   gameScreen = 0;
   moves = 0;
   maze = new Maze();
@@ -93,11 +93,7 @@ void playGame() {
     hunger.reset(maze.xcor, maze.ycor);
     lizard.grow();
   }
-  for (int
-  print(dist(
-  
 }
-
 
 //DISPLAY METHODS--------------------------------------------------------------------------------
 void displayStartingScreen() {
@@ -140,10 +136,7 @@ boolean mazeCollide() {
     for (int j=0; j<walls[i].length; j++) {
       float snakeX=lizard.xcor.get(0);
       float snakeY=lizard.ycor.get(0);
-      if (walls[i][j]==true && 
-        i*20<=snakeX && snakeX<=i*20+20 
-        && j*20<=snakeY && snakeY<=j*20+20) {
-        System.out.println(snakeX+","+snakeY);
+      if (walls[i][j]==true && i*20<=snakeX && snakeX<=i*20+20 && j*20<=snakeY && snakeY<=j*20+20) {
         return true;
       }
     }
