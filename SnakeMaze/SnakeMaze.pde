@@ -1,4 +1,4 @@
-Snake lizard;  //<>//
+Snake lizard;  //<>// //<>//
 Food hunger;
 Maze maze;
 int gameScreen;
@@ -136,7 +136,7 @@ boolean mazeCollide() {
     for (int j=0; j<walls[i].length; j++) {
       float snakeX=lizard.xcor.get(0);
       float snakeY=lizard.ycor.get(0);
-      if (walls[i][j]==true && i*20<=snakeX && snakeX<=i*20+20 && j*20<=snakeY && snakeY<=j*20+20) {
+      if (walls[i][j]==true && i*20<=snakeX && snakeX<=i*20+15 && j*20<=snakeY && snakeY<=j*20+15) {
         return true;
       }
     }

@@ -2,6 +2,7 @@ class Food {
   float quantity;
   float xcor;
   float ycor;
+
   Food() {
     xcor = 13.0 * 20;
     ycor = 13.0 * 20;
@@ -21,11 +22,14 @@ class Food {
         if (first == x.get(i) && second == y.get(j)) {
           xcor = (int)random(1, 29) * 20.0;
           ycor = (int)random(1, 29) * 20.0;
-        } else {
+        } 
+        if (random(3) > 4) {
           xcor = (int)random(1, 29) * 20.0;
           ycor = (int) random(1, 29) * 20.0;
         }
-      }
+      } 
+      xcor = (int)random(1, 29) * 20.0;
+      ycor = (int) random(1, 29) * 20.0;
     }
   }
 }
