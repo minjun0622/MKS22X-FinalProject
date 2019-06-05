@@ -59,7 +59,9 @@ Made the food inside the maze avoid the walls by limiting it from 1-29 however, 
 Got the arraylist to store the coordinates of the maze and the highlighted tiles. However, I still don't understand what to do with it. There is a problem getting the distance and I don't know why the problem is there. Will consult with my partner.
 
 6/4/19
-Last day! I got the reset feature to work by pressing the r key. 
+Last day! I got the reset feature to work by pressing the r key.
+I GOT THE FOOD TO SPAWN IN THE TILES THAT ARE NOT TRUE.
+This isn't a guarantee, however, what I did was that if the xcor and the ycor of the Food (randomly generated), was matched to be in the xcor and the ycor of the highlighted true tiles in the maze, then it would create another set of random floats that would act as the xcor and the ycor. This means that there is a slight chance that the food could spawn in the highlighted true tiles but the probability of that happening is really really super duper low so we just got to pray that this doesn't happen in the demo. 
 
 5/21/19
 # Mihad
