@@ -1,6 +1,15 @@
 # MKS22X-FinalProject
 
 # Group Name: Dynamic Duo
+
+#Description
+This game is similar to the game of Snake, where a tiny square moves around the world collecting the little pieces of food that is dropped randomly across the world. However, my group put a twist on this game and made it take place inside a maze where there is harder obstacles.
+
+#Instructions for Playing the Game
+When loading the game, you have two options. Pressing the button 1, will trigger a world that only has a border. If number 2 is pressed, then a world that is a maze will be generated. You have the arrow keys to move around. When you died, just press the 'r' key and you can restart with the choice of pressing either 1 or 2.
+A cheat was added such that if TAB was pressed multiple times, then the game would automatically think you won! 
+
+#DEVlogs!
 # Minjun
 5/16/19
 Worked on the prototype today due to the fact that it was not complete. Plan to complete the prototype by tomorrow by 8:40.
@@ -61,7 +70,7 @@ Got the arraylist to store the coordinates of the maze and the highlighted tiles
 6/4/19
 Last day! I got the reset feature to work by pressing the r key.
 I GOT THE FOOD TO SPAWN IN THE TILES THAT ARE NOT TRUE.
-This isn't a guarantee, however, what I did was that if the xcor and the ycor of the Food (randomly generated), was matched to be in the xcor and the ycor of the highlighted true tiles in the maze, then it would create another set of random floats that would act as the xcor and the ycor. This means that there is a slight chance that the food could spawn in the highlighted true tiles but the probability of that happening is really really super duper low so we just got to pray that this doesn't happen in the demo. 
+This isn't a guarantee, however, what I did was that if the xcor and the ycor of the Food (randomly generated), was matched to be in the xcor and the ycor of the highlighted true tiles in the maze, then it would create another set of random floats that would act as the xcor and the ycor. This means that there is a slight chance that the food could spawn in the highlighted true tiles but the probability of that happening is really really super duper low so we just got to pray that this doesn't happen in the demo.
 
 5/21/19
 # Mihad
