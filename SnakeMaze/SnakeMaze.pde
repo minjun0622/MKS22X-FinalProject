@@ -22,7 +22,7 @@ void draw() {
     displayStartingScreen();
   }
   //----------------------------
-  else if (lizard.isTouching() || moves == 500) {
+  else if (lizard.isTouching() || moves == 500 || mazeCollide()) {
     displayEndScreen();
   } 
   //----------------------------
@@ -133,5 +133,21 @@ void displayWin() {
 void scoreBoard() {
   text(lizard.leng, height/2, width/2); 
   text("Moves left:" + (500 - moves), height/2, width / 4 - 30);
+}
+boolean mazeCollide() {
+  boolean walls[][] = maze.walls; 
+  for (int i=0; i<walls.length; i++) {
+    for (int j=0; j<walls[i].length; j++) {
+      float snakeX=lizard.xcor.get(0);
+      float snakeY=lizard.ycor.get(0);
+      if (walls[i][j]==true && 
+        i*20<=snakeX && snakeX<=i*20+20 
+        && j*20<=snakeY && snakeY<=j*20+20) {
+        System.out.println(snakeX+","+snakeY);
+        return true;
+      }
+    }
+  }
+  return false;
 }
 //------------------------------------------------------------------------------------------------
