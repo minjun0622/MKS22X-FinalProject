@@ -22,17 +22,13 @@ void draw() {
     displayStartingScreen();
   }
   //----------------------------
-  else if (lizard.isTouching() || moves == 500) {
+  else if (lizard.isTouching() || moves == 500 || mazeCollide()) {
     displayEndScreen();
   } 
   //----------------------------
   else if (lizard.leng == 15 || cheat >= 5.0) {
     displayWin();
   } 
-  //----------------------------
-  else if (mazeCollide()) {
-    displayEndScreen();
-  }
   //----------------------------
   else if (gameScreen == 1) {
     background(#D0FF03);
@@ -141,8 +137,10 @@ boolean mazeCollide() {
     for (int j=0; j<walls[i].length; j++) {
       float snakeX=lizard.xcor.get(0);
       float snakeY=lizard.ycor.get(0);
-      if (i*20<=snakeX && snakeX<=i*20+20 
+      if (walls[i][j]==true && 
+        i*20<=snakeX && snakeX<=i*20+20 
         && j*20<=snakeY && snakeY<=j*20+20) {
+        System.out.println(snakeX+","+snakeY);
         return true;
       }
     }
