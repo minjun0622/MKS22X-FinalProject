@@ -30,6 +30,10 @@ void draw() {
     displayWin();
   } 
   //----------------------------
+  else if (mazeCollide()) {
+    displayEndScreen();
+  }
+  //----------------------------
   else if (gameScreen == 1) {
     background(#D0FF03);
     fill(#FF0000);
@@ -130,5 +134,19 @@ void displayWin() {
 void scoreBoard() {
   text(lizard.leng, height/2, width/2); 
   text("Moves left:" + (500 - moves), height/2, width / 4 - 30);
+}
+boolean mazeCollide() {
+  boolean walls[][] = maze.walls; 
+  for (int i=0; i<walls.length; i++) {
+    for (int j=0; j<walls[i].length; j++) {
+      float snakeX=lizard.xcor.get(0);
+      float snakeY=lizard.ycor.get(0);
+      if (i*20<=snakeX && snakeX<=i*20+20 
+        && j*20<=snakeY && snakeY<=j*20+20) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 //------------------------------------------------------------------------------------------------
