@@ -93,6 +93,9 @@ void playGame() {
     hunger.reset(maze.xcor, maze.ycor);
     lizard.grow();
   }
+  for (int
+  print(dist(
+  
 }
 
 
